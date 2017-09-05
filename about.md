@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I've started making software far before Microsoft .NET 1.0.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Recently I'm interested in F#.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[roman.motyka@gmail.com](mailto:roman.motyka@gmail.com)
