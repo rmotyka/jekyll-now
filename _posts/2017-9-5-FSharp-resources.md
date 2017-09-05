@@ -1,11 +1,8 @@
 ---
 layout: post
-title: What I'm going to do
+title: Learning resources
 tags: F#
 ---
-Learning resources
-==================
-
 There are some resources which I use to learn F#:
 
 1. <https://fsharpforfunandprofit.com> - it is a great site and my primary source
