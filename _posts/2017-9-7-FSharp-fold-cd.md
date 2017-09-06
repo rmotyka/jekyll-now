@@ -26,3 +26,24 @@ Results:
 1. But in fold *folder* function there are: *acc, x* and in foldBack: *x, acc*
 1. The second difference order of init accumulator value and the list of items
 
+List.fold2
+--------
+
+And also List.foldBack2 and there are some more functions with *2*. They do the same but on two lists at the same time.
+Example:
+
+```F#
+List.fold2 (fun acc x y -> printf "%d%s " x y) () [1..3] ["a"; "b"; "c"]
+1a 2b 3c val it : unit = ()
+```
+
+So the folder function takes three arguments: accumulator, item from the first list and item from the second one. The length of these list must be the same.
+In List.foldBack2 arguments are in different order, like in foldBack:
+
+
+```F#
+List.foldBack2 (fun y x acc -> printf "%d%s " x y)  ["a"; "b"; "c"] [1..3] ()
+3c l2b 1a val it : unit = ()
+```
+
+It seems that the logic is the same but all arguments are the opposite way. Good.
