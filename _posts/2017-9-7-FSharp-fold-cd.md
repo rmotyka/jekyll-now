@@ -2,7 +2,7 @@
 layout: post
 title: More folds
 tags: F#
-published: false
+published: true
 ---
 There are brothers and sisters of *List.fold*.
 

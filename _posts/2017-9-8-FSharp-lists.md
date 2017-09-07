@@ -39,4 +39,33 @@ Before calculating average the given function is called.
 List.averageBy (fun elem -> float elem) [1 .. 10]
 ```
 
+choose
+-----
 
+That one is F# specific. It has a function which convert list items to option and then return only list of Some values.
+
+```F#
+List.choose (fun x -> if x > 2 then Some(x) else None) [ 2; 1;  3; -2; 4]
+val it : int list = [3; 4]
+```
+
+another usage could be the case if you have a list with options:
+
+```F#
+List.choose (fun x -> x) [ Some(2); None; Some(3); None; Some(4)]
+val it : int list = [2; 3; 4]
+```
+
+chunkBySize
+---------
+
+That's nice! Sometimes you have a long list and you want to divide it to smaller chunks. Here you are:
+
+```F#
+List.chunkBySize 3 [1..10]
+val it : int list list = [[1; 2; 3]; [4; 5; 6]; [7; 8; 9]; [10]]
+```
+
+The first parameter is of course the size of the chunk.
+
+That's enough for now, but I have to return to List module later it has tons of nice features.
