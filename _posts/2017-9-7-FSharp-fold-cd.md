@@ -33,17 +33,16 @@ And also List.foldBack2 and there are some more functions with *2*. They do the 
 Example:
 
 ```F#
-List.fold2 (fun acc x y -> printf "%d%s " x y) () [1..3] ["a"; "b"; "c"]
+List.fold2 (fun acc x y -> printf "%d%O " x y) () [1..3] ['a'..'c']
 1a 2b 3c val it : unit = ()
 ```
 
 So the folder function takes three arguments: accumulator, item from the first list and item from the second one. The length of these list must be the same.
 In List.foldBack2 arguments are in different order, like in foldBack:
 
-
 ```F#
-List.foldBack2 (fun y x acc -> printf "%d%s " x y)  ["a"; "b"; "c"] [1..3] ()
-3c l2b 1a val it : unit = ()
+List.foldBack2 (fun y x acc -> printf "%d%O " x y) ['a'..'c'] [1..3] ()
+3c 2b 1a val it : unit = ()
 ```
 
 It seems that the logic is the same but all arguments are the opposite way. Good.
