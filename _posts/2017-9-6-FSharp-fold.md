@@ -83,3 +83,15 @@ Again that is a sample from [msdn page](https://msdn.microsoft.com/pl-pl/library
 In each iteration it just add item to the accumulator, which initial value is zero.
 
 If I find some interesting fold matters I'll add them here, but for now it seems to be enough to work with *List.fold*.
+
+
+There are some tricks with folds:
+1. Check if item is in the list:
+
+```F#
+let isInList elementToFind listToCheck = 
+    List.fold(fun acc x -> acc || x = elementToFind) false listToCheck
+```
+
+but better is to use *List.exists*.
+
