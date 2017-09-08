@@ -57,7 +57,7 @@ val it : int list = [2; 3; 4]
 ```
 
 chunkBySize
----------
+------------
 
 That's nice! Sometimes you have a long list and you want to divide it to smaller chunks. Here you are:
 
@@ -69,3 +69,21 @@ val it : int list list = [[1; 2; 3]; [4; 5; 6]; [7; 8; 9]; [10]]
 The first parameter is of course the size of the chunk.
 
 That's enough for now, but I have to return to List module later it has tons of nice features.
+
+slicing
+--------
+
+In the meantime I've found something nice: _slicing_.
+
+```F#
+let l = [1..5] // val l : int list = [1; 2; 3; 4; 5]
+//                             index: 0; 1; 2; 3; 4
+l.[1..3] // val it : int list = [2; 3; 4]
+l.[2..]  // val it : int list = [3; 4; 5]
+l.[..3]  // val it : int list = [1; 2; 3; 4]
+l.[..5]  // IndexOutOfRangeException
+l.[-1..] // IndexOutOfRangeException
+```
+
+We can cut out some part of the list using index, as shown above. It's a new feature int F# 4.0.
+If you use index outside of range you will get _System.IndexOutOfRangeException_ which is logical.
