@@ -3,7 +3,7 @@ layout: post
 title: Fold
 tags: F#
 ---
-That is a powerful one. Fold is a swiss army knife when you deal with lists etc. It is a kind of iterator over list items and during that process it gathers output in an accumulator value. So to use it you have to give necessary arguments:
+That is a powerful one. Fold is a swiss army knife when you deal with lists etc.<!-- more -->It is a kind of iterator over list items and during that process it gathers output in an accumulator value. So to use it you have to give necessary arguments:
 
 * function or lambda which is executed in each iteration
 * initial accumulator value and
