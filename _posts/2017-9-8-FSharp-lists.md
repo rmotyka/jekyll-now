@@ -1,8 +1,8 @@
 ---
 layout: post
-title: About lists
+title: About lists functions part 1
 tags: F#
-published: false
+published: true
 ---
 
 It seems that List Module has plenty of interesting stuff. I suppose that it might be a very often used module I'll try to cover most of it.
@@ -86,4 +86,4 @@ l.[-1..] // IndexOutOfRangeException
 ```
 
 We can cut out some part of the list using index, as shown above. It's a new feature int F# 4.0.
-If you use index outside of range you will get _System.IndexOutOfRangeException_ which is logical.
+If you use index outside of range you will get _System.IndexOutOfRangeException_ which is sound.
