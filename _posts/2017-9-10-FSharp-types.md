@@ -6,6 +6,7 @@ published: false
 ---
 
 It is a large subject but I'll try to make a condensed pill.
+<!-- more -->
 
 | Type            | Sample                                    | Description         |
 |-----------------|-------------------------------------------|---------------------|

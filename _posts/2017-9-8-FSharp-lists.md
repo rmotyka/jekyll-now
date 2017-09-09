@@ -5,7 +5,7 @@ tags: F#
 published: true
 ---
 
-It seems that List Module has plenty of interesting stuff. I suppose that it might be a very often used module I'll try to cover most of it.
+It seems that List Module has plenty of interesting stuff. I suppose that it might be a very often used module I'll try to cover most of it.<!-- more -->
 The source documentation is on [msd page](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
 
 append

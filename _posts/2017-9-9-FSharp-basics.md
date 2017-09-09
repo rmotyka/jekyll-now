@@ -5,6 +5,10 @@ tags: F#
 published: false
 ---
 
+TODO: napisać wstęp
+
+<!-- more -->
+
 ## Code organization
 
 ### Namespaces

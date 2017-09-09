@@ -5,7 +5,7 @@ tags: F#
 published: true
 ---
 There are brothers and sisters of *List.fold*.
-
+<!-- more -->
 List.foldBack
 ----------
 
