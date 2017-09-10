@@ -13,8 +13,8 @@ It is a large subject but I'll try to make a condensed pill.
 | Alias               | type ProductId = int                          | Just another name.     |
 | Tuple               | let person = (int, string)                    | No type keyword.       |
 | Record              | type Person = {name: string; age:int}         | Can be nested.         |
-| Discriminated Union | type Vehicle = Car of string | Boat of string | Sth. like union in C++ |
-| Enum                | type State = Good = 1 | Bad = 2               | Like in C#             |
+| Discriminated Union | type Vehicle = Car of string \| Boat of string | Sth. like union in C++ |
+| Enum                | type State = Good = 1 \| Bad = 2               | Like in C#             |
 | Class               | type Order (number: int) =                    |                        |
 |                     |      member ths.Print =                       |                        |
 |                     |        printfn "Order %d" number              |                        |
