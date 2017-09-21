@@ -8,7 +8,7 @@ published: true
 Reading some pro F# code I encountered some unclear case. So I've made some investigation and here we are.
 For the beginning regular matching:
 
-```f#
+```F#
 let multByOption (a: int) (b: int option) =
     match b with
     | Some x -> Some (a * x)
@@ -18,7 +18,7 @@ let multByOption (a: int) (b: int option) =
 Simple function that multiply integer by the option integer.
 But it might be written shorter:
 
-```f#
+```F#
 let multByOption1 (a: int) =
     function
     | Some x -> Some (a * x)
@@ -29,7 +29,7 @@ And the second function does the same.
 
 And this is a form of that function between those above:
 
-```f#
+```F#
 let multByOptionA (a: int) =
     fun (b: int option) ->
         match b with
