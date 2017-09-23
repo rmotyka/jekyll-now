@@ -70,6 +70,24 @@ The first parameter is of course the size of the chunk.
 
 That's enough for now, but I have to return to List module later it has tons of nice features.
 
+collect
+-------
+
+For each element in list collect apply a function and then concatenate the result. It might be used on two kinds:
+
+1. To concatenate list of lists:
+
+```F#
+[[1; 2; 3]; [4; 5; 6]; [7; 8; 9]; [10]] |> List.collect (id)
+```
+
+1. To generate list for each list element and concatenate the result:
+
+```F#
+[1; 2; 3] |> List.collect (fun x -> [1 .. x])
+val it : int list = [1; 1; 2; 1; 2; 3]
+```
+
 slicing
 --------
 
