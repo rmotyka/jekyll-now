@@ -81,7 +81,7 @@ For each element in list collect apply a function and then concatenate the resul
 [[1; 2; 3]; [4; 5; 6]; [7; 8; 9]; [10]] |> List.collect (id)
 ```
 
-1. To generate list for each list element and concatenate the result:
+2. To generate list for each list element and concatenate the result:
 
 ```F#
 [1; 2; 3] |> List.collect (fun x -> [1 .. x])
