@@ -9,7 +9,7 @@ It seems that List Module has plenty of interesting stuff. I suppose that it mig
 The source documentation is on [msd page](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
 
 append
------
+------ 
 
 Joins two list together. You can do that with List.concat as well. Another option is to use *@* operator.
 
@@ -17,6 +17,12 @@ Joins two list together. You can do that with List.concat as well. Another optio
 let list1 = List.append [1; 2] [3; 4]
 let list2 = List.concat [ [5; 6 ]; [7; 8] ]
 let list3 = list1 @ list2
+```
+
+Very similar is *concat* which concatenate more than two lists:
+
+```F#
+[[1; 2]; [3; 4]; [5; 6]] |> List.concat
 ```
 
 average
@@ -86,6 +92,31 @@ For each element in list collect apply a function and then concatenate the resul
 ```F#
 [1; 2; 3] |> List.collect (fun x -> [1 .. x])
 val it : int list = [1; 1; 2; 1; 2; 3]
+```
+
+contains
+--------
+
+Returns true if element is in given list.
+
+```F#
+List.contains "a" ["a"; "b"; "c"]
+```
+
+countBy
+--------
+
+Counts lambda functions results.
+
+```F#
+List.ofSeq "aaaabccaadeeee" |> List.countBy (id)
+val it : (char * int) list =
+  [('a', 6); ('b', 1); ('c', 2); ('d', 1); ('e', 4)]
+
+// or
+
+List.ofSeq "aaaabccaadeeee" |> List.countBy (fun x -> if x = 'a' then "A" else "X")
+val it : (string * int) list = [("A", 6); ("X", 8)]
 ```
 
 slicing
