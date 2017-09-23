@@ -81,13 +81,13 @@ collect
 
 For each element in list collect apply a function and then concatenate the result. It might be used on two kinds:
 
-1. To concatenate list of lists:
+* To concatenate list of lists:
 
 ```F#
 [[1; 2; 3]; [4; 5; 6]; [7; 8; 9]; [10]] |> List.collect (id)
 ```
 
-2. To generate list for each list element and concatenate the result:
+* To generate list for each list element and concatenate the result:
 
 ```F#
 [1; 2; 3] |> List.collect (fun x -> [1 .. x])
